@@ -1,0 +1,421 @@
+@charset "UTF-8" ;
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #000;
+  font-family: 'Roboto' , 'Noto Sans JP' , sans-serif;
+  font-weight: 400;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　スマートフォン
+------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　　ヘッダー
+------------------------------------------------------*/
+
+#header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 100%;
+  max-width: 150px;
+}
+
+.logo a {
+  display: block;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  margin-left: 40px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  #header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
+  main {
+    padding-top: 60px;
+  }
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　ハンバーガーメニューボタン
+------------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    z-index: 30;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    transition: all 0.4s;
+  }
+
+  .hamburger span:nth-of-type(1) {
+    top: 16px;
+  }
+
+  .hamburger span:nth-of-type(2) {
+    top: 25px;
+  }
+
+  .hamburger span:nth-of-type(3) {
+    top: 34px;
+  }
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　ハンガーガーメニュー
+------------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+  .nav {
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -80%;
+    z-index: 20;
+    transition: all 0.6s;
+  }
+  
+  .menu {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding: 60px 0;
+    overflow: auto;
+  }
+
+  .menu li {
+    padding: 10px 0;
+    margin-left: 0;
+  }
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　ハンガーガーボタンを押した際の動作
+------------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+  .nav.active {
+    right: 0;
+  }
+
+  .hamburger.active span:nth-of-type(1) {
+    top: 24px;
+    transform: rotate(-45deg);
+  }
+
+  .hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-of-type(3) {
+    top: 24px;
+    transform: rotate(45deg);
+  }
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　インナー要素
+------------------------------------------------------*/
+
+.inner {
+  max-width: 1120px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　コンテナー要素
+------------------------------------------------------*/
+
+.container {
+  max-width: 940px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　セクションタイトル
+------------------------------------------------------*/
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background-color: #000;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　セクションタイトル　レスポンシブ
+------------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+
+  .section-title::after {
+    width: 60px;
+  }
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　　　マーカー
+------------------------------------------------------*/
+
+.highlight {
+  background: linear-gradient(transparent 50%, #fff390 50%);
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　　　　フッダー
+------------------------------------------------------*/
+
+#footer {
+  border-top: solid 1px #707070;
+  padding: 40px 0 20px;
+}
+
+.footer-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.footer-box .logo {
+  max-width: 130px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav li {
+  font-size: 14px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.footer-nav li::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #000;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 3px;
+  right: -20px;
+}
+
+.footer-nav li:last-child::after {
+  content: none;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　　フッダーレスポンシブ
+------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .footer-box {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .footer-box .logo {
+    margin-bottom: 20px;
+  }
+  .footer-nav li {
+    margin-left: 30px;
+  }
+  .footer-nav li::after {
+    right: -15px;
+  }
+  .footer-nav li:nth-of-type(1) {
+    margin-left: 0;
+  }
+  .copyright {
+    margin-bottom: 20px;
+  }
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　　ページヘッダー
+------------------------------------------------------*/
+.page-header {
+  background-color: #FFED58;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  padding: 60px 0 100px;
+  text-align: center;
+}
+.page-header .page-title .ja {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.page-header .page-title .en {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+/* ------------------------------------------------------
+　　　　　　　　　　　　　ページヘッダーレスポンシブ
+------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .page-header {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding: 30px 0 50px;
+  }
+  .page-header .page-title .en {
+    font-size: 30px;
+  }
+}
+/* ------------------------------------------------------
+　　　　　　　　　　　　　ページヘッダー下テキスト
+------------------------------------------------------*/
+.page-head-text {
+  padding: 50px 0;
+  text-align: center;
+}
+.page-head-text .title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.page-head-text .text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+@media screen and (min-width: 767px) {
+  .sp {
+    display: none;
+  }
+}
+/* ------------------------------------------------------
+　　　　　　　　　　ページヘッダー下テキストレスポンシブ
+------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .page-head-text .title {
+    font-size: 20px;
+  }
+}
+/* ------------------------------------------------------
+　　　　　　　　　　　　　　お問い合わせ
+------------------------------------------------------*/
+
+.contact {
+  background-color: #FFED58;
+  clip-path: polygon(0 20%,100% 0,100% 100%,0 100%);
+  padding: 100px 0 60px;
+}
+
+.box {
+  text-align: center;
+}
+
+.contact .text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact .btn {
+  font-size: 14px;
+  background-color: #fff;
+  padding: 20px 60px;
+  border: solid 1px #707070;
+  display: inline-block;
+}
+
+/* ------------------------------------------------------
+　　　　　　　　　　　　お問い合わせレスポンシブ
+------------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+  .contact {
+    padding: 60px 0 40px;
+    clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
+  }
+}
